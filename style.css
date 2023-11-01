@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
+:root{
+    --orange: #FFA015;
+    --yellow: #FFDD15;
+    --red: #FF3131;
+    --white: #FFF;
+    --black: #000;
+    --blue: #0000FF;
+    --ligh-green: #00FF00;
+    --dark-green: #09A409;
+
+}
 
 *{
     margin: 0;
@@ -26,17 +37,17 @@ body{
 }
 
 .header h2{
-    color: #fff;
+    color: var(--white);
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.4rem;
     margin: 0 20px;
     font-weight: 800;
-    -webkit-text-stroke-color: #000;
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--orange);
+    -webkit-text-stroke-width: 2px;
 }
 
 .header h3{
-    color: #000;
+    color: var(--black);
     text-align: center;
     font-size: 1.1rem;
     font-style: italic;
@@ -45,7 +56,7 @@ body{
 }
 
 .header h3 span{
-    color: red;
+    color: var(--red);
     font-style: unset;
 }
 
@@ -64,7 +75,7 @@ body{
     position: relative;
     width: 600px;
     height: 350px;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 3px solid rgba(211, 135, 11, 0.749);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -75,7 +86,7 @@ body{
     position: relative;
     margin: 30px 22px;
     width: 550px;
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid var(--orange);
 }
 
 .form-box .input-box input{
@@ -85,20 +96,20 @@ body{
     border: none;
     outline: none;
     padding: 0 20px 0 5px;
-    color: #fff;
+    color: var(--white);
     font-size: 16px;
 }
 
 
 input::placeholder{
-    color: #fff;
+    color: var(--white);
 }
 
 .btn{
-    color: #fff;
-    background: blue;
+    color: var(--red);
+    background: var(--yellow);
     width: 80%;
-    margin: 10px 40px;
+    margin: 10px 60px;
     height: 50px;
     border-radius: 5px;
     outline: none;
@@ -108,18 +119,9 @@ input::placeholder{
     box-shadow: 3px 0 10px rgba(0,0,0,0.5);
 }
 
-#result{
-    font-size: .8rem;
-    color: #191918;
-    opacity: 0.8;
-    margin: 0 22px -35px 22px;
-    font-weight: 900;
-    position: relative;
-}
-
 .popup{
     width: 400px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 6px;
     position: absolute;
     top: 20%;
@@ -130,16 +132,16 @@ input::placeholder{
     text-align: center;
     padding: 0 30px 30px;
     height: 350px;
-    color: #000;
+    color: var(--black);
 }
 
 .popup ion-icon{
-    color: #00ff00;
+    color: var(--ligh-green);
     font-size: 50px;
 }
 
 .popup h2{
-    color: #09a409;
+    color: var(--dark-green);
 }
 
 .popup p{
@@ -149,25 +151,25 @@ input::placeholder{
 }
 
 .popup p span{
-    color: red;
+    color: var(--red);
     font-size: .8rem;
 }
 
 .popup button{
     width: 100%;
-    background: #09a409;
+    background: var(--dark-green);
     padding: 3px 0;
     border: none;
     outline: none;
     font-size: 1.1rem;
-    color: #fff;
+    color: var(--white);
     border-radius: 4px;
     cursor: pointer;
     box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
 }
 
 .popup a{
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     font-weight: 600;
     letter-spacing: 2px;
@@ -178,3 +180,29 @@ input::placeholder{
     /* transform: translate(-50%, -50%) scale(1); */
     visibility: visible;
 }
+
+.footer{
+    margin-top: 10px;
+    color: var(--white);
+    opacity: 0.5;
+}
+
+@media (width < 769px){
+    .header h2{
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (width < 498px){
+    .header h2{
+      font-size: 1rem;
+    }
+  
+    .header h3{
+      font-size: .6rem;
+    }
+  
+    .header h4{
+      font-size: .8rem;
+    }
+  }
